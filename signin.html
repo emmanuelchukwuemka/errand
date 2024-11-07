@@ -1,0 +1,147 @@
+<html>
+<head>
+    <title>Login Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fff;
+        }
+        .container {
+            width: 100%;
+            max-width: 500px; /* Increased width */
+            padding: 40px; /* Increased padding */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+        .header {
+            margin-bottom: 30px; /* Increased margin */
+        }
+        .header h1 {
+            color: #00d1b2;
+            font-size: 28px; /* Increased font size */
+            margin: 0;
+        }
+        .header h1 span {
+            font-size: 28px; /* Increased font size */
+        }
+        .header .icon {
+            font-size: 35px; /* Increased icon size */
+            color: #00d1b2;
+        }
+        .form-group {
+            margin-bottom: 20px; /* Increased margin */
+            text-align: left;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px; /* Increased font size */
+        }
+        .form-group .password-icon {
+            position: absolute;
+            right: 10px;
+            top: 40px; /* Adjusted position */
+            cursor: pointer;
+        }
+        .form-options {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px; /* Increased margin */
+        }
+        .form-options label {
+            display: flex;
+            align-items: center;
+            font-size: 16px; /* Increased font size */
+            color: #333;
+        }
+        .form-options input {
+            margin-right: 5px;
+        }
+        .form-options a {
+            font-size: 16px; /* Increased font size */
+            color: #333;
+            text-decoration: none;
+        }
+        .form-options a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            width: 100%;
+            padding: 15px; /* Increased padding */
+            background-color: #00d1b2;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 18px; /* Increased font size */
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #00bfa5;
+        }
+        .footer {
+            margin-top: 30px; /* Increased margin */
+            font-size: 16px; /* Increased font size */
+            color: #333;
+        }
+        .footer a {
+            color: #00d1b2;
+            text-decoration: none;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .top-right-star {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 35px;
+            color: #00d1b2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <i class="fas fa-star top-right-star"></i>
+        <div class="header">
+            <h1>Hi, Welcome! <span>👋</span></h1>
+        </div>
+        <form>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" id="email" placeholder="Your email">
+            </div>
+            <div class="form-group" style="position: relative;">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Password">
+                <i class="fas fa-eye password-icon"></i>
+            </div>
+            <div class="form-options">
+                <label>
+                    <input type="checkbox"> Remember me
+                </label>
+                <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit" class="btn">Sign In</button>
+        </form>
+        <div class="footer">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+</body>
+</html>
