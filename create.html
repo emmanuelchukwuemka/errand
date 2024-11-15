@@ -1,11 +1,12 @@
+<!DOCTYPE html>
 <html>
- <head>
-  <title>
-   Explore
-  </title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
             margin: 0;
             padding: 0;
             display: flex;
@@ -13,78 +14,105 @@
             align-items: center;
             height: 100vh;
             background-color: #0A1F1C;
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             color: white;
         }
+
         .container {
             text-align: center;
+            padding: 40px; /* Increased padding for larger space */
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+            max-width: 600px; /* Increased max-width */
+            width: 100%;
         }
+
         .stars {
             position: relative;
-            margin-bottom: 20px;
+            margin-bottom: 40px; /* Increased margin for better spacing */
         }
+
+        /* Circular logo styling and rotation */
         .stars img {
-            width: 100px;
-            height: 100px;
+            width: 150px; /* Increased image size */
+            height: 150px;
+            border-radius: 50%; /* Makes the logo circular */
+            animation: spin 6s linear infinite; /* Adds rotating animation */
         }
-        .stars img:nth-child(2) {
-            position: absolute;
-            top: 0;
-            left: 50px;
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
         }
-        .stars img:nth-child(3) {
-            position: absolute;
-            top: 20px;
-            left: 30px;
-        }
+
         .title {
-            font-size: 24px;
+            font-size: 40px; /* Larger font size for the title */
             font-weight: bold;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
+            letter-spacing: 3px;
         }
+
         .subtitle {
-            font-size: 14px;
-            margin-bottom: 30px;
+            font-size: 20px; /* Increased font size for subtitle */
+            margin-bottom: 40px;
+            color: #aaa;
         }
+
         .button {
             display: block;
-            width: 80%;
-            margin: 10px auto;
-            padding: 15px;
+            width: 90%; /* Increased button width */
+            margin: 15px auto; /* Increased margin for spacing */
+            padding: 20px; /* Larger padding */
             border: none;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 30px;
+            font-size: 20px; /* Larger font size for buttons */
+            font-weight: bold;
             cursor: pointer;
+            transition: all 0.3s ease;
         }
+
         .button.signin {
             background-color: #1ED5A9;
             color: white;
         }
+
+        .button.signin:hover {
+            background-color: #16b493;
+            transform: scale(1.05);
+        }
+
         .button.create-account {
             background-color: white;
             color: black;
         }
-  </style>
- </head>
- <body>
-  <div class="container">
-   <div class="stars">
-    <img alt="Green star shape" height="100" src="https://storage.googleapis.com/a1aa/image/V9Edehmhq91jYiZ3wbkCfAbTrGm47bSMomr4tvDX5eDP7eiOB.jpg" width="100"/>
-    <img alt="White star shape" height="100" src="https://storage.googleapis.com/a1aa/image/1fW9HfdBMcsqpUdbV8bbQ76aINJVXusGTSMvXg7u9M3ldvoTA.jpg" width="100"/>
-    <img alt="Dark background star shape" height="100" src="https://storage.googleapis.com/a1aa/image/QInN2Jed0NznQaySxUZ0eAOMCI7fTf35IC7PkPyhynhM29iOB.jpg" width="100"/>
-   </div>
-   <div class="title">
-    Explore
-   </div>
-   <div class="subtitle">
-    Now your orders are in one place and always under control
-   </div>
-   <button class="button signin">
-    Sign In
-   </button>
-   <button class="button create-account">
-    Create account
-   </button>
-  </div>
- </body>
+
+        .button.create-account:hover {
+            background-color: #f0f0f0;
+            transform: scale(1.05);
+        }
+        a{
+            text-decoration: none;
+        }
+        a :hover{
+            color: #16b493;
+            text-decoration: none;
+                }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="stars">
+            <img src="errads.jpg" alt="Dark background star shape" />
+        </div>
+        <div class="title">Explore</div>
+        <div class="subtitle">Now your orders are in one place and always under control</div>
+       <a href="signin.html"> <button class="button signin">Sign In</button></a>
+       <a href="signup.html"><button class="button create-account">Create Account</button></a>
+    </div>
+</body>
 </html>

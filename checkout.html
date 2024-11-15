@@ -1,99 +1,126 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Checkout</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NV Errands</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
+            font-family: 'Roboto', sans-serif;
+            background-color: #00d1b2; /* Green background */
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
         .container {
             width: 100%;
-            max-width: 800px;
-            background-color: #fff;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
+            max-width: 700px;
+            background-color: #ffffff;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
             overflow: hidden;
+            transition: all 0.3s ease;
         }
         .header {
-            padding: 20px;
+            padding: 25px;
             text-align: center;
-            background-color: #f8f8f8;
-            border-bottom: 1px solid #e0e0e0;
+            background-color: #00d1b2;
+            color: white;
             position: relative;
+            border-bottom: 2px solid #e0e0e0;
         }
         .header h1 {
             margin: 0;
-            color: #00d1b2;
-            font-size: 32px;
+            font-size: 36px;
+            font-weight: 700;
         }
         .header .back-icon {
             position: absolute;
             left: 20px;
             top: 50%;
             transform: translateY(-50%);
-            color: #00d1b2;
-            font-size: 28px;
+            color: white;
+            font-size: 30px;
             cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .header .back-icon:hover {
+            color: #e0e0e0;
         }
         .content {
             padding: 40px;
         }
         .content h2 {
             margin: 0;
-            color: #00d1b2;
-            font-size: 24px;
+            font-size: 28px;
+            color: #333;
+            font-weight: 500;
             display: inline-block;
         }
         .content .change {
             float: right;
-            color: #000;
+            color: #00d1b2;
             font-size: 18px;
+            font-weight: 500;
             cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .content .change:hover {
+            color: #009e8b;
         }
         .address-box {
             margin-top: 20px;
-            padding: 20px;
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            height: 300px;
+            padding: 25px;
+            background-color: #fafafa;
+            border: 2px solid #e0e0e0;
             border-radius: 10px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #aaa;
+            font-size: 18px;
         }
         .footer {
             padding: 20px;
             text-align: center;
-            background-color: #f8f8f8;
-            border-top: 1px solid #e0e0e0;
+            background-color: #fafafa;
+            border-top: 2px solid #e0e0e0;
         }
         .footer .done-button {
             background-color: #00d1b2;
-            color: #fff;
+            color: white;
             border: none;
-            padding: 15px 30px;
-            font-size: 20px;
-            border-radius: 25px;
+            padding: 15px 40px;
+            font-size: 22px;
+            font-weight: 700;
+            border-radius: 30px;
             cursor: pointer;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
         .footer .done-button:hover {
             background-color: #00bfa5;
+            transform: translateY(-2px);
         }
         @media (max-width: 800px) {
             .container {
                 border-radius: 0;
                 box-shadow: none;
             }
+            .content {
+                padding: 20px;
+            }
             .header .back-icon {
-                left: 10px;
+                left: 15px;
             }
             .footer .done-button {
                 width: 100%;
                 box-sizing: border-box;
+                padding: 15px;
             }
         }
     </style>
@@ -105,12 +132,14 @@
             <h1>Checkout</h1>
         </div>
         <div class="content">
-            <h2>Delivery address</h2>
+            <h2>Delivery Address</h2>
             <span class="change">CHANGE</span>
-            <div class="address-box"></div>
+            <div class="address-box">
+                <p>No address selected</p>
+            </div>
         </div>
         <div class="footer">
-            <button class="done-button">Done</button>
+            <button class="done-button">Confirm</button>
         </div>
     </div>
 </body>

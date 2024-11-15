@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NV Errands</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <style>
+    /* Basic styling for the container */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Full-page background with green overlay */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: url('market.jpg') no-repeat center center/cover; /* Replace with your background image */
+      position: relative;
+    }
+
+    /* Green overlay for the background */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(48, 227, 202, 0.5); /* Green overlay with 50% opacity */
+      z-index: 1;
+    }
+
+    /* Styling for the form container */
+    .container {
+      position: relative;
+      text-align: center;
+      padding: 40px;
+      width: 90%;
+      max-width: 450px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 2;
+      color: #333;
+    }
+
+    /* Logo styling with rotation */
+    .logo {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 20px;
+      background: url('errads.jpg') no-repeat center center; /* Replace with your logo image */
+      background-size: cover;
+      border-radius: 50%; /* Makes the logo circular */
+      animation: rotate 5s linear infinite; /* Adds rotating animation */
+    }
+
+    /* Rotating animation */
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Styling for heading and form */
+    h2 {
+      font-size: 28px;
+      color: #30e3ca;
+      margin-bottom: 30px;
+    }
+
+    form input, form select {
+      width: 100%;
+      padding: 15px;
+      margin: 15px 0;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      width: 100%;
+      padding: 15px;
+      background-color: #30e3ca;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+      margin-top: 20px;
+    }
+
+    form button:hover {
+      background-color: #28c2a6;
+    }
+
+    /* Footer text */
+    p {
+      font-size: 12px;
+      color: #555;
+      margin-top: 20px;
+    }
+
+    p a {
+      color: #30e3ca;
+      text-decoration: none;
+    }
+
+    p a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="logo"></div>
+    <h2>Create account</h2>
+    <form action="{{ url_for('signup') }}" method="POST">
+      <input type="email" name="email" placeholder="Email address" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" placeholder="Confirm password" required>
+      <input type="text" name="location" placeholder="Location" required>
+      <input type="tel" name="phone" placeholder="Phone number" required>
+      <select name="gender" required>
+        <option value="">Select Gender</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select>
+      <button type="submit">Create account</button>
+    </form>
+    <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    <p>By creating an account, you agree to our <a href="#">Terms and Conditions</a></p>
+  </div>
+</body>
+</html>
