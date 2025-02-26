@@ -20,7 +20,7 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      background: url('market.jpg') no-repeat center center/cover; /* Replace with your background image */
+      background: url('pic/039.jpg') no-repeat center center/cover; /* Replace with your background image */
       position: relative;
     }
 
@@ -120,13 +120,41 @@
     p a:hover {
       text-decoration: underline;
     }
+
+    .loader {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.8);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+    .spinner {
+      border: 8px solid #f3f3f3;
+      border-top: 8px solid #00c853;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
   </style>
 </head>
 <body>
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
   <div class="container">
     <div class="logo"></div>
     <h2>Create account</h2>
-    <form action="{{ url_for('signup') }}" method="POST">
+    <form id="signupForm" action="signup.php" method="POST">
       <input type="email" name="email" placeholder="Email address" required>
       <input type="password" name="password" placeholder="Password" required>
       <input type="password" name="confirm_password" placeholder="Confirm password" required>
@@ -140,8 +168,13 @@
       </select>
       <button type="submit">Create account</button>
     </form>
-    <p>Already have an account? <a href="{{ url_for('login') }}">Login</a></p>
+    <p>Already have an account? <a href="signin.html">Login</a></p>
     <p>By creating an account, you agree to our <a href="#">Terms and Conditions</a></p>
   </div>
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      document.querySelector('.loader').style.display = 'flex';
+    });
+  </script>
 </body>
 </html>

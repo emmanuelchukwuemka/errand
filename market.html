@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
 <head>
     <title>Go to Market</title>
     <meta charset="UTF-8">
@@ -20,6 +20,7 @@
             max-width: 800px;
             margin: 50px auto;
             background-color: #fff;
+            padding: 20px;
             border-radius: 20px;
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -27,7 +28,7 @@
         .header {
             position: relative;
             height: 300px;
-            background-image: url('market.jpg');
+            background-image: url('pic/market.jpg');
             background-size: cover;
             background-position: center;
             text-align: center;
@@ -113,15 +114,17 @@
             <textarea id="item-description"></textarea>
         </div>
         <div class="footer">
-            <i class="fab fa-whatsapp icon"></i>
+          <a href="https://wa.me/2349018677067">  <i class="fab fa-whatsapp icon"></i></a>
             <button class="add-to-cart" onclick="addToCart()">ADD TO CART</button>
         </div>
     </div>
-
+    
     <script>
         function addToCart() {
             alert('Item added to cart!');
         }
     </script>
+
+
 </body>
 </html>

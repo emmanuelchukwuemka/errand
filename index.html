@@ -16,6 +16,9 @@
         font-size: 14px; /* Adjusts font size for smaller screens */
         padding: 10px;
     }
+    .fab fa-whatsapp {
+    width:500px;
+ }
 
     .sidebar {
         display: none; /* Hides the sidebar on smaller devices */
@@ -29,20 +32,172 @@
     width: 90%; /* Adjusts based on the screen size */
     margin: 0 auto; /* Centers the container */
 }
- 
+ .at{
+    border-radius: 100%;
+ }
+ .slideshow-container {
+      position: relative;
+      max-width: 61%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      box-sizing: border-box;
+    }
+
+    .slide img {
+      width: 80%;
+      height: fit-content;
+    }
+
+    .cta-content {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .cta-content h3 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    .cta-content p {
+      margin: 5px 0;
+    }
+
+    .cta-content button {
+      background: #04dbdb;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    nav {
+        background-color: rgba(0, 102, 46, 0.8); /* Semi-transparent */
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #fff;
+    }
+    nav .logo {
+        font-size: 24px;
+        font-weight: 600;
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    nav ul li {
+        display: inline;
+    }
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+    nav ul li a:hover {
+        color: #008b46;
+    }
+    .content {
+        text-align: center;
+        padding: 50px 20px;
+    }
+    .content h2 {
+        font-size: 32px;
+        color: #333333;
+        margin-bottom: 40px;
+    }
+    .content p {
+        font-size: 18px; /* Increase font size */
+        color: #444; /* Darker color for better readability */
+        line-height: 1.6; /* Increase line height for better readability */
+    }
+    .card {
+        display: inline-block;
+        width: 300px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(2, 180, 47, 0.1);
+        margin: 20px;
+        padding: 20px;
+        text-align: center;
+        position: relative;
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(2, 180, 47, 0.2);
+    }
+    .card:active {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 8px rgba(2, 180, 47, 0.1);
+    }
+    .card img {
+        width: 80%; /* Make images smaller */
+        height: auto;
+        object-fit: cover; /* Ensure images cover the area */
+        border-radius: 10px;
+    }
+    .card h3 {
+        font-size: 24px;
+        color: #333333;
+        margin: 20px 0 10px;
+    }
+    .card p {
+        font-size: 16px;
+        color: #666666;
+        margin: 0 0 20px;
+    }
+    .card .btn {
+        background-color: #00c853;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    .card .btn:hover {
+        background-color: #00a152;
+    }
+    .card .icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        color: #00c853;
+    }
     </style>
 </head>
 <body>
+    
     <div class="header">
         <div class="left">
             <a href="#">Get 10% off your first order: <strong>ORDER10</strong></a>
         </div>
         <div class="right">
+            <a href="https://wa.me/2349018677067">  <i class="fab fa-whatsapp icon"></i></a>
             <a href="profile.html">profile</a>
-            <a href="#">Special Offers</a>
-            <a href="#">Stores</a>
+            <a href="contact.html">Contact</a>
+            <a href="create.html">create account</a>
+            <a href="https://wa.me/2349018677067">chat us now<i class="fab fa-whatsapp icon"></i> </a>
             <a href="market.html">Track Order</a>
-            <a href="#" class="cart"><i class="fas fa-shopping-cart"></i> 2 Items</a>
+            <a href="about.html" class="cart"><i class="fas fa-shopping-cart"></i> About us</a>
             <a href="signup.html">Signup</a>
             <a href="signin.html">Login</a>
         </div>
@@ -126,27 +281,83 @@
         <div class="section-title">
          Popular Restaurants/Stores/vendors
         </div>
-        <div class="vendors">
-         <div class="vendor">
-          <p>
-           Lee Mart Stores
-          </p>
-         </div>
-         <div class="vendor">
-          <p>
-           Exotic
-          </p>
-         </div>
-         <div class="vendor">
-          <p>
-           Chicken Chicken
-          </p>
-         </div>
-         <div class="vendor">
-          <p>
-           Shoprite
-          </p>
-         </div>
+        
+        <div class="wrapper">
+            <div class="wee">
+                <img src="pic/freepik__upload__36147.jpeg" alt="Fast food image">
+                <span>Fast food</span>
+            </div>
+            <div class="wee">
+                <img src="pic/woman-shopping-vegetables-supermarket.jpg" alt="Provision image">
+                <span>Provision</span>
+            </div>
+            <div class="wee">
+                <img src="pic/woman-shopping-vegetables-supermarket (1).jpg" alt="Pasta & Cereals image">
+                <span>Pasta & Cereals</span>
+            </div>
+            <div class="wee">
+                <img src="pic/mix-pizza-chicken-tomato-bell-pepper-olives-mushroom-side-view.jpg" alt="Pizza image">
+                <span>Pizza</span>
+            </div>
+            <div class="wee">
+                <img src="pic/breakfast.jpg" alt="Breakfast image">
+                <span>Breakfast</span>
+            </div>
+            <div class="wee">
+                <img src="https://placehold.co/150x100" alt="Soup image">
+                <span>Soup</span>
+            </div>
+            <div class="wee">
+                <img src="pic/soup.jpeg" alt="Soup image">
+                <span>Soup</span>
+            </div>
+        </div>
+
+        <div class="content">
+          <h2>Why Choose Us?</h2>
+          <div class="card">
+            <i class="fas fa-check-circle icon"></i>
+            <img alt="Person smiling in a branded t-shirt" height="200" src="https://storage.googleapis.com/a1aa/image/Rz6osGIQGxbWLpiEJJM1kdjeDZaEQncaT1t8gGWezQtsxrwTA.jpg" width="300"/>
+            <h3>Reliable and Trust Worthy</h3>
+            <p>We ensure your errands are handled with care and reliability.</p>
+            <a class="btn" href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <i class="fas fa-check-circle icon"></i>
+            <img alt="Person holding a package" height="200" src="https://storage.googleapis.com/a1aa/image/EsElKIXpz16hI9vLEe50e17fXQtDfxwjc45DA0spgCnFHvCPB.jpg" width="300"/>
+            <h3>Personalized Services</h3>
+            <p>Customizing our services to meet your specific needs.</p>
+            <a class="btn" href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <i class="fas fa-check-circle icon"></i>
+            <img alt="Person delivering groceries" height="200" src="https://storage.googleapis.com/a1aa/image/fiJyjG1syy3QJafMeRckN6vinKeM94GgVOgfpVVpZQEeb8K8E.jpg" width="300"/>
+            <h3>Efficient Time Saving</h3>
+            <p>Save time and focus on what matters most to you.</p>
+            <a class="btn" href="#">Learn More</a>
+          </div>
+          <!-- Additional Cards -->
+          <div class="card">
+            <i class="fas fa-check-circle icon"></i>
+            <img alt="Person packing groceries" height="200" src="https://storage.googleapis.com/a1aa/image/Be0WhgMvK12eb0YQHsbHGEa7yISevoWFxgMaer1SroO1GvCPB.jpg" width="300"/>
+            <h3>Affordable Pricing</h3>
+            <p>Providing top-quality service without breaking the bank.</p>
+            <a class="btn" href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <i class="fas fa-check-circle icon"></i>
+            <img alt="Professional delivery staff" height="200" src="https://storage.googleapis.com/a1aa/image/fiJyjG1syy3QJafMeRckN6vinKeM94GgVOgfpVVpZQEeb8K8E.jpg" width="300"/>
+            <h3>Professional Team</h3>
+            <p>Our experienced team ensures your items are in safe hands.</p>
+            <a class="btn" href="#">Learn More</a>
+          </div>
+          <div class="card">
+            <i class="fas fa-check-circle icon"></i>
+            <img alt="High-tech packaging" height="200" src="https://storage.googleapis.com/a1aa/image/Rz6osGIQGxbWLpiEJJM1kdjeDZaEQncaT1t8gGWezQtsxrwTA.jpg" width="300"/>
+            <h3>Eco-Friendly Practices</h3>
+            <p>We use sustainable packaging and methods to reduce our carbon footprint.</p>
+            <a class="btn" href="#">Learn More</a>
+          </div>
         </div>
         <div class="ad-section">
          <img alt="A happy couple looking at their phones" height="200" src="https://storage.googleapis.com/a1aa/image/7RXy1eAuznS1QCMIu82vdHwK7rTfvmjIRjz01r0s4feV1ujOB.jpg" width="600"/>
@@ -155,32 +366,43 @@
          </p>
         </div>
         <div class="cta-section">
-         <div class="cta">
-          <img alt="A chef holding a plate of food" height="200" src="https://storage.googleapis.com/a1aa/image/XpPADeXAQXwaTSLm56aLsiaeZiLvUe2fW2YXBIRpuH2eqdHdC.jpg" width="600"/>
-          <div class="cta-content">
-           <h3>
-            Earn more with lower fees
-           </h3>
-           <p>
-            Partner with us
-           </p>
-           <button>
-            Get Started
-           </button>
+        
+           <div class="slideshow-container">
+            <div class="slides">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <img src="pic/IMG-20241121-WA0001.jpg" alt="A chef holding a plate of food">
+                <div class="cta-content">
+                
+                </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="slide">
+                <img src="pic/IMG-20241120-WA0004.jpg" alt="A delivery person with a scooter">
+                              </div>
+              <!-- Slide 3 -->
+              <div class="slide">
+                <img src="pic/IMG-20241120-WA0003.jpg" alt="A bustling marketplace">
+                <div class="cta-content">
+                  <h3>Connect with customers worldwide</h3>
+                  <p>Join our platform</p>
+                  <button>Learn More</button>
+                </div>
+              </div>
+              <!-- Slide 4 -->
+              <div class="slide">
+                <img src="pic/IMG-20241118-WA0024.jpg" alt="A happy customer with a purchase">
+              
+              </div>
+              <!-- Slide 5 -->
+              <div class="slide">
+                <img src="pic/IMG-20241120-WA0004.jpg" alt="A team meeting">
+                <div class="cta-content">
+                 
+                </div>
+              </div>
+            </div>
           </div>
-         </div>
-         <div class="cta">
-          <img alt="A delivery person with a scooter" height="200" src="https://storage.googleapis.com/a1aa/image/DRa5QSWCbXr8LdJyZFXoe0IgPoyr3hbEdpBfySfqYYHpa3RnA.jpg" width="600"/>
-          <div class="cta-content">
-           <h3>
-            Increase your business visibility
-           </h3>
-           <p>
-            Advertise with us
-           </p>
-           <button>
-            Get Started
-           </button>
           </div>
          </div>
         </div>
@@ -207,7 +429,7 @@
          </div>
          <div class="cards">
           <div class="card">
-           <img alt="Question mark icon" height="50" src="https://storage.googleapis.com/a1aa/image/wqfC2y81gTUqFSR9ykRxymmGoCUUoca6WO04RH906R6f77oTA.jpg" width="50"/>
+           <img alt="Question mark icon" height="50" src="pic/IMG-20241121-WA0001.jpg" width="50"/>
            <h3>
             How does NVF needs work?
            </h3>
@@ -222,7 +444,7 @@
            </p>
           </div>
           <div class="card">
-           <img alt="Payment icon" height="50" src="https://storage.googleapis.com/a1aa/image/OFeWWAe7JQn2S0XDQevqFBuFEdptE4fHFenOjqRIBZWQgfO6E.jpg" width="50"/>
+           <img alt="Payment icon" height="50" src="pic/IMG-20241121-WA0001.jpg" width="50"/>
            <h3>
             Place an Order!
            </h3>
@@ -231,7 +453,7 @@
            </p>
           </div>
           <div class="card">
-           <img alt="Tracking icon" height="50" src="https://storage.googleapis.com/a1aa/image/paDZu55iffk87Efxshmea3K2DWkH1WfLYidvAsHDTB3BgfO6E.jpg" width="50"/>
+           <img alt="Tracking icon" height="50" src="pic/IMG-20241120-WA0004.jpg" width="50"/>
            <h3>
             Track Progress
            </h3>
@@ -240,7 +462,7 @@
            </p>
           </div>
           <div class="card">
-           <img alt="Delivery icon" height="50" src="https://storage.googleapis.com/a1aa/image/zkf4nrdyoMXbFqE6kJGfnEqm3EEJfxbMzGRKIdwLg9d533RnA.jpg" width="50"/>
+           <img alt="Delivery icon" height="50" src="pic/IMG-20241120-WA0003.jpg" width="50"/>
            <h3>
             Get your Order!
            </h3>
@@ -251,32 +473,31 @@
          </div>
         </div>
         <div class="stats">
-         <div>
-          50+
-          <br/>
-          Registered Riders
-         </div>
-         <div>
-          789,900+
-          <br/>
-          Orders Delivered
-         </div>
-         <div>
-          60+
-          <br/>
-          Business Partnered
-         </div>
-         <div>
-          17,457+
-          <br/>
-          Food Items
-         </div>
-        </div>
-       </div>
+            <div>
+              <span id="riders">0</span>
+              <br/>
+              Registered Riders
+            </div>
+            <div>
+              <span id="orders">0</span>
+              <br/>
+              Orders Delivered
+            </div>
+            <div>
+              <span id="partners">0</span>
+              <br/>
+              Business Partnered
+            </div>
+            <div>
+              <span id="foodItems">0</span>
+              <br/>
+              Food Items
+            </div>
+          </div>
        <div class="footer">
         <div class="container">
          <div class="logo">
-          <img alt="NV Errands logo" height="50" src="https://storage.googleapis.com/a1aa/image/Or6b5wrKNIJpIZQKt0XvsaGW0fEvhLpDpEAeAPZ6L3Qe33RnA.jpg" width="50"/>
+          <img alt="NV Errands logo" height="50" src="errads.jpg" width="50" class="at" />
           <div>
            NV ERRANDS
           </div>
@@ -284,11 +505,11 @@
          <div class="subscribe">
           <h4>
            Get Exclusive Deals in your Inbox
-          </h4>
-          <input placeholder="Enter your email" type="email"/>
-          <button>
-           Subscribe
-          </button>
+          </h4><form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Enter search term" required>
+            <button type="submit">Search</button>
+        </form>
+        <div id="results"></div>
           <div class="social-icons">
            <a href="#">
             <i class="fab fa-facebook-f">
@@ -312,7 +533,7 @@
           <h4>
            Legal Pages
           </h4>
-          <a href="#">
+          <a href="aboutus.html">
            Privacy Policy
           </a>
           <a href="#">
@@ -329,10 +550,10 @@
           <a href="#">
            About Us
           </a>
-          <a href="#">
+          <a href="contact.html">
            Contact Us
           </a>
-          <a href="#">
+          <a href="contact.html">
            FAQs
           </a>
           <a href="#">
@@ -349,6 +570,95 @@
        </div>
 
        <script>
+        document.getElementById('searchForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const query = document.getElementById('searchInput').value;
+
+            try {
+                const response = await fetch(`/search?query=${encodeURIComponent(query)}`);
+                const data = await response.json();
+
+                if (response.ok) {
+                    let resultsDiv = document.getElementById('results');
+                    resultsDiv.innerHTML = '<h2>Search Results:</h2>';
+                    data.results.forEach(item => {
+                        resultsDiv.innerHTML += `<p>${item.name} - Category: ${item.category}</p>`;
+                    });
+                } else {
+                    document.getElementById('results').innerHTML = `<p>${data.message || data.error}</p>`;
+                }
+            } catch (error) {
+                document.getElementById('results').innerHTML = `<p>An error occurred: ${error.message}</p>`;
+            }
+        });
+
+        let slideIndex = 0;
+  const slides = document.querySelector('.slides');
+  const totalSlides = document.querySelectorAll('.slide').length;
+
+  function showSlides() {
+    slideIndex++;
+    if (slideIndex >= totalSlides) {
+      slideIndex = 0;
+    }
+    slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  setInterval(showSlides, 3000); // Change slide every 3 seconds
+
+
+
+        function animateCount(id, start, end, duration) {
+      let startTime = null;
+      const element = document.getElementById(id);
+      
+      function countUp(timestamp) {
+        if (!startTime) startTime = timestamp;
+        const progress = timestamp - startTime;
+        const currentCount = Math.min(start + progress / duration * (end - start), end);
+        element.textContent = Math.floor(currentCount).toLocaleString();
+        
+        if (progress < duration) {
+          requestAnimationFrame(countUp);
+        } else {
+          element.textContent = end.toLocaleString(); // Ensure final count is accurate
+        }
+      }
+      
+      requestAnimationFrame(countUp);
+    }
+
+    // Start the animations
+    animateCount("riders", 0, 50, 2000);
+    animateCount("orders", 0, 789900, 4000);
+    animateCount("partners", 0, 60, 3000);
+    animateCount("foodItems", 0, 17457, 2500);
+  
+        document.getElementById('searchForm').addEventListener('submit', async function(event) {
+    event.preventDefault();  // Prevent form from reloading the page
+    const query = document.getElementById('searchInput').value.trim();
+
+    if (query) {
+        try {
+            const response = await fetch(`http://127.0.0.1:5000/search?query=${encodeURIComponent(query)}`);
+            const data = await response.json();
+
+            if (response.ok) {
+                let resultsDiv = document.getElementById('results');
+                resultsDiv.innerHTML = '<h2>Search Results:</h2>';
+                data.results.forEach(item => {
+                    resultsDiv.innerHTML += `<p>${item.name} - Category: ${item.category}</p>`;
+                });
+            } else {
+                document.getElementById('results').innerHTML = `<p>${data.message || data.error}</p>`;
+            }
+        } catch (error) {
+            document.getElementById('results').innerHTML = `<p>An error occurred: ${error.message}</p>`;
+        }
+    } else {
+        alert('Please enter a search term');
+    }
+});
         // JavaScript to show and hide the modal
         window.onload = function() {
             const modal = document.getElementById('introModal');
